@@ -19,10 +19,11 @@ router.get("/s/:url_id", async(req, res) =>{
 
     const checkAvailable = await executeQuery("SELECT * FROM shorturl_data WHERE url_id=?", [String(url_id)]);
     if(checkAvailable.results.length === 0){
-        return res.json({
-            status: "FAIL",
-            error: "Cant find information from this id",
-        });
+        return res.redirect(config.mainWebUrl);
+        // return res.json({
+        //     status: "FAIL",
+        //     error: "Cant find information from this id",
+        // });
     }
 
     // if pass and then update status

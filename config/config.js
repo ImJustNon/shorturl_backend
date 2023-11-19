@@ -9,6 +9,7 @@ module.exports = {
         mongodb: "mongodb+srv://non:non@cluster0.rp8ie.mongodb.net/",
         mysql: MysqlConfig,
     },
+    mainWebUrl: "https://wiiss.nonlnwza.xyz"
 }
 
 
